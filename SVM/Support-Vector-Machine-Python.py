@@ -2,9 +2,8 @@
 # Author: Jayden Lee (Jayden.Lee@student.uts.edu.au)
 # Author: Ryan Cleminson (Ryan.Cleminson@student.uts.edu.au)
 # Date: 6/10/19
-# Purpose: To use a SVM for our regression problem. 
-# Source: 
-# In Source Documentation
+# Purpose: Using the SVM learner one must predict the outcome of whether a 
+# 		   clients quote will default.
 #############################################################################
 
 #############################################################################
@@ -17,9 +16,9 @@ from sklearn import metrics
 import pickle
 import time
 #############################################################################
-# Input: input
+# Input: filename
 # This function DOES
-# Output: input
+# Output: save file of predicted quote default outcomes
 #############################################################################
 
 def SVMRegression(filename):
