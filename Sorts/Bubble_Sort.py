@@ -23,14 +23,14 @@ while Name != "//":
 #   Swap Definition
 #############################################################################
 
-def Swapper(Name1, Name2):
+def Swap(Name1, Name2):
     temp = Name1
     Name1 = Name2
     Name2 = temp
     return(Name1, Name2)
 
 #############################################################################
-#   Sort names
+#   Bubble Sort names
 #############################################################################
 
 NumNames = int(len(Names))
@@ -45,7 +45,7 @@ while Swapped == True:
         # print(Names)
         # print(i+1)
         if Names[i] > Names[i+1]:
-            Names[i], Names[i+1] = Swapper(Names[i], Names[i+1])
+            Names[i], Names[i+1] = Swap(Names[i], Names[i+1])
             Swapped = True
         i = i + 1
     
