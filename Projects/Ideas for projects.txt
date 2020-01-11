@@ -1,0 +1,12 @@
+Libraries of Code:
+Sorts:
+- Bubble
+- Insertion
+- Selection
+Searches
+- Linear
+- Binary
+
+
+Task 1:
+Doctors Appointments
