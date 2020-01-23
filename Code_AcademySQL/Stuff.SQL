@@ -57,3 +57,63 @@ FROM movies;
 
 SELECT DISTINCT year
 FROM movies;
+
+/***********************************************************/
+/*  Displays the movies that were made after 2014          */
+/***********************************************************/
+SELECT *
+FROM movies
+WHERE year > 2014
+
+/***********************************************************************************************************************/
+/*  Displays all movies where the name is similar to that of the 'quote' where the "_" acts as any individual character*/
+/***********************************************************************************************************************/
+SELECT *
+FROM movies
+WHERE name LIKE 'Se_en';
+
+/*****************************************************************************************************/
+/*  "%" matches zero or more characters in the patern ---> A% will find all movies that start with A */
+/*****************************************************************************************************/
+SELECT * 
+FROM movies
+WHERE name LIKE '%man%';
+
+/******************************************************************************/
+/*  Shows results of movies between 1970 and 1979 and have a high imdb rating */
+/******************************************************************************/
+SELECT *
+FROM movies
+WHERE year BETWEEN 1970 AND 1979
+  AND imdb_rating > 8;
+
+/*************************************************************/
+/*  Shows results of movies with genres of romance or comedy */
+/*************************************************************/
+SELECT *
+FROM movies
+WHERE genre = 'romance' or genre = 'comedy';
+
+/*************************************************************/
+/*  Shows results of movies in an alphabetical order */
+/*************************************************************/
+
+SELECT name, year
+FROM movies
+ORDER BY name;
+
+/***************************************************************/
+/*  Shows results of best rated movies rated highest to lowest */
+/***************************************************************/
+SELECT name, year, imdb_rating
+FROM movies
+ORDER BY imdb_rating DESC;
+
+
+/***************************************************************/
+/*  Shows top 3 rated movies */
+/***************************************************************/
+Select * 
+FROM movies
+ORDER BY imdb_rating DESC
+LIMIT 3;
