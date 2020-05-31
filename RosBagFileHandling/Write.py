@@ -1,6 +1,7 @@
 import rosbag
 from std_msgs.msg import Int32, String 
-bag = rosbag.Bag('test.bag', 'w')
+
+bag = rosbag.Bag('Test.bag', 'w')
 
 try:
     s = String()
@@ -11,5 +12,5 @@ try:
 
     bag.write('chatter', s)
     bag.write('numbers', i)
- finally:
+finally:
     bag.close()
